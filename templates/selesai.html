@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selesai</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4CAF50, #66BB6A);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+    .card {
+      background: white;
+      color: #333;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    .card h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #2E7D32;
+    }
+    .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #388E3C;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">🎉</div>
+    <h2>Selamat <span id="nama">Nama Siswa</span>, semua tugas sudah selesai!</h2>
+    <p>Kerja bagus! Kamu sudah menyelesaikan seluruh tahapan dengan baik 👍</p>
+    <!-- Link diperbaiki -->
+    <a href="{{ url_for('index') }}" class="btn">Kembali ke Halaman Utama</a>
+</div>
+
+  <script>
+    // Contoh inject nama via JS
+    document.getElementById("nama").textContent = "Andi";
+  </script>
+</body>
+</html>
